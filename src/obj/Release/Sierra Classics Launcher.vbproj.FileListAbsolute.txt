@@ -1,0 +1,71 @@
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\ResolveAssemblyReference.cache
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmAbout.resources
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmMain.resources
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmPreferences.resources
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.Resources.resources
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra Classics Launcher.vbproj.GenerateResource.Cache
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.exe.manifest
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.application
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.exe
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.pdb
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.xml
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.TrustInfo.xml
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.exe.manifest
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.application
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.exe
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.xml
+E:\Development\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.pdb
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.exe.manifest
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.application
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.exe
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.pdb
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\bin\Release\SCLauncher.xml
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmAbout.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmMain.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmPreferences.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.Resources.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\ResGen.read.1.tlog
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\ResGen.write.1.tlog
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.TrustInfo.xml
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.exe.manifest
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.application
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.exe
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.xml
+C:\Users\dwood\Dropbox\Dev\Visual Basic 2005\Sierra Classics Launcher\obj\Release\SCLauncher.pdb
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.exe
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.xml
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.pdb
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.exe.manifest
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.application
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.exe
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.pdb
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.xml
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmAbout.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmMain.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmPreferences.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.Resources.resources
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\ResGen.read.1.tlog
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\ResGen.write.1.tlog
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.TrustInfo.xml
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.exe.manifest
+C:\Users\dwood\Dropbox\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.application
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.exe
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.xml
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.pdb
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.exe.manifest
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.application
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.exe
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.pdb
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\bin\Release\SCLauncher.xml
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\ResolveAssemblyReference.cache
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmAbout.resources
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmMain.resources
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.frmPreferences.resources
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\Sierra_Classics_Launcher.Resources.resources
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\ResGen.read.1.tlog
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\ResGen.write.1.tlog
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.TrustInfo.xml
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.exe.manifest
+D:\Google Drive\Dev\Visual Basic\Sierra Classics Launcher\obj\Release\SCLauncher.application

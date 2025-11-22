@@ -1,0 +1,150 @@
+Sierra Classics Launcher
+
+In Development:
+ Advanced dosbox features
+ Shift Game Button order
+ Using -xml flag doesn't reflect last opened database (maybe)
+
+
+1.0.0.18 (26 July 2012)
+ Added checkbox for remembering last opened database on application close
+  Application saves config during close (not game database files)
+ Added tooltip variable info to Preferences
+ Renamed Reload to Reload Config
+ Recoded launching of applications
+ Added the ability to launch other applications
+  to use: leave program field blank and SCL will start process with Game Path & Game Exe with Game Cmd for arguments
+
+1.0.0.17 (26 July 2009)
+ Fixed Configuration Save Loading incorrect Database
+ Added Saving of Game Entry Selection after Save Config
+ Added internal mounting (issue with King's due to single quote)
+  Launches the dosbox application with "-c" variable for executing commands
+   "mount c '<gamepath>'"
+ Added command line argument "-xml" -- Usage: SCLauncher.exe -xml SpaceQuestLauncher.xml
+  Looks in the set XML path for the database to launch
+
+
+1.0.0.16 (19 June 2009)
+ Removed registry configuration
+ Added XML configuration for planned portable use (config.xml)
+ Added default variables when config.xml not found
+ Added %CURDIR for use with XMLDBPath and GameArtPath variables in Preferences (portable use)
+ Improved Memory management
+
+
+1.0.0.15 (17 June 2007)
+ Added error checking for missing data or databases
+ Added option to hide the Database drop down box
+ Added option to show GameArt for each Game
+ Added Game Art Path textbox
+ Added Game Art coding (mousehover, mouseleave, etc...)
+ Added new variables
+  %CURDIR - the application's startup directory
+  %GAMEART - the specified Game Art Path
+ Added images to Database page for showing default art and game art
+  
+  
+1.0.0.14 Beta (10 June 2007)
+ Added option to close Preferences window when saving
+  -Turning this is off is useful when editing multiple databases
+ Edited launcher coding to better support additional programs (tested with ScummVM)
+ Added ScummVM support (Since, ScummVM now includes Sarien)
+  -Path and Exe do not have to be included
+  -Just enter "scummvm" into the Program textbox for the specified Game
+   then put in "-p "%PATH\GAME" GAME" for the command.
+   Refer to the the ScummVM Readme for more information
+  -Added textbox for ScummVM path
+ Added XML Database Path textbox
+
+1.0.0.13 Beta (9 June 2007)
+ Added check for file extension on creating a new database
+ Set "dosbox" to the defined default value for GameProgs
+ Reset game to 1 when change the number of buttons in Database tab
+ Added delete button to database tab
+ Added default name and buttons values when creating a new Database (Name -.xml, 1) 
+ Set the images to stretch to fit within window (Opinions on this?)
+
+1.0.0.12 Beta (9 June 2007)
+ Fixed bug (changing buttons value in preferences would result in data loss)
+  -Will now save the data if the number is changed to add another game to the database
+
+1.0.0.11 Beta (8 June 2007)
+ Added DOSBox integration for running it directly
+  - shortcuts are still supported
+ Added Game#Exe variables (forgot to include from the SierraLauncher.ini)
+ Added registry reading/writing code back into program for preferences and variables
+ Added Game#Prog and Game#Cmd functions
+	- if Game#Prog equals "dosbox" it accesses a registry key
+	  if the key doesn't exist it writes the default DOSBox directory
+	  (Allowing the ability to update dosbox location on newer versions
+ Removed Tools -> Databases menu options
+ Added Listbox to bottom left of form.  Automatically loads on change.
+ Updated default XML files for new syntax.  Working on backwards compatibility.
+ Added new value DefaultPath
+ Added new custom variable for databases %PATH, which represents the default path
+ Add Preferences form (Main and Database tabs)
+  - All settings under Main tab save to registry
+ Added option to choose which file loads on start (first, last, random, custom)
+ Added option to customize the title window (variables: %APP, %VER, %GAME)
+ Added option to specify dosbox location
+ Added database reading/writing for XML files
+  - writing currently ignores white space
+ Added Reload option (CTRL+R)
+ Fixed tab indexes
+ Added error checking coding
+ Many other fixex
+ 
+1.0.0.10 Beta (3 June 2007)
+ Removed the registry portion of the code (no longer uses registry)
+ Removed internal images
+ Removed Preferences form
+ Added XML file reading
+ Added launching of first xml file found in XML folder
+ Cleaned coding (smaller footprint)
+
+1.0.0.9 Beta (3 June 2007)
+ Original Release based off the Space Quest Launcher 1.0.0.8 Code
+ 
+
+
+ Space Quest Launcher
+1.0.0.8 (2 June 2007)
+ Fixed spelling errors in preferences and about page
+ Renamed caption to "Space Quest Collection(TM)"
+ Renamed Space Quest: Replicated to Space Quest 0: Replicated
+ Moved Space Quest Replicated to position 2 on the Misc Launch Options
+ Switch button for Misc Launch Options
+
+1.0.0.7 (2 June 2007)
+ Fixed tab indexes and focusing
+ Cleaned code
+ 
+1.0.0.6 (2 June 2007)
+ Added ability to add SQ1EGA, SQ Lost Chapter, and SQ Replicated shortcut links
+  -button on main page to show additional launches
+  -entries in Preferences for locations
+
+1.0.0.5 (2 June 2007)
+ Added option to specify whether to use the default shortcut paths or specify individual locations
+ 
+1.0.0.4 (1 June 2007)
+ Added manual location for each shortcut to be launched
+  - preferences form
+  - sq1-6 registry entries (HKLM/Software/Vaguesoft/Space Quest Launcher/Items)
+ 
+1.0.0.3 (1 June 2007)
+ Added registry keys for variables instead of the file (HKLM/Software/Vaguesoft/Space Quest Launcher)
+ Removed config file, since it is no longer needed (config.cfg)
+ Removed all variables and code related to writing and loading a file
+ 
+1.0.0.2 (1 June 2007)
+ Edited launcher code to handle install shortcuts
+
+1.0.0.1 (31 May 2007)
+ Added launcher sub routine to handle executes and catches
+ 
+1.0.0.0 (31 May 2007)
+ Original Release
+ 
+ (C) 2007 Vaguesoft
