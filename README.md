@@ -1,5 +1,4 @@
 # Sierra Classics Launcher
-![[scl_logo.webp]]
 
 Sierra Classics Launcher is a replacement program for the original launcher included with Vivendi’s 2006 releases of Space Quest, King’s Quest, Leisure Suit Larry, and Police Quest. It can be customized to launch any game.
 
