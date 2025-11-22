@@ -8,8 +8,6 @@ Sierra Classics Launcher is a replacement program for the original launcher incl
 - Select Game Art for the Collection or individual Games
 - Launch to DOSBox, ScummVM or a custom program/shortcut with custom arguments
 
-[More Info](https://sierraclassicgaming.com/launcher/)
-
 ## Version History
 ### 1.0.0.20 (17 July 2013)
 - Updated Program Logo and About information.
@@ -29,3 +27,5 @@ Sierra Classics Launcher is a replacement program for the original launcher incl
 - Recoded launching of applications
 - Added the ability to launch other applications
   - To use: leave program field blank and SCL will start process with Game Path & Game Exe with Game Cmd for arguments
+
+  [project page](https://sierraclassicgaming.com/launcher/)
