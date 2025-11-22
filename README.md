@@ -28,4 +28,3 @@ Sierra Classics Launcher is a replacement program for the original launcher incl
 - Added the ability to launch other applications
   - To use: leave program field blank and SCL will start process with Game Path & Game Exe with Game Cmd for arguments
 
-[project page](https://sierraclassicgaming.com/launcher/)
