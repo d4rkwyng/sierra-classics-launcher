@@ -1,0 +1,58 @@
+{
+  "build": {
+    "beforeBuildCommand": "",
+    "beforeDevCommand": "",
+    "devPath": "./ui",
+    "distDir": "./ui"
+  },
+  "package": {
+    "productName": "Sierra Classics Launcher",
+    "version": "2.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "open": true
+      },
+      "dialog": {
+        "open": true,
+        "save": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "Game",
+      "copyright": "2007-2024 Derek Wood",
+      "identifier": "com.sierraclassics.launcher",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "longDescription": "A customizable front-end launcher for vintage Sierra games, allowing configuration for DOSBox, ScummVM, or custom game launches.",
+      "macOS": {
+        "entitlements": null,
+        "minimumSystemVersion": "10.13"
+      },
+      "shortDescription": "Sierra Classics Game Launcher",
+      "targets": "all"
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "title": "Sierra Classics Launcher",
+        "width": 700,
+        "height": 550,
+        "minWidth": 550,
+        "minHeight": 450,
+        "resizable": true,
+        "center": true
+      }
+    ]
+  }
+}

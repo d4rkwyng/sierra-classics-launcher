@@ -1,0 +1,129 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            target: aarch64-apple-darwin
+            name: macOS-arm64
+          - platform: macos-latest
+            target: x86_64-apple-darwin
+            name: macOS-x64
+          - platform: ubuntu-22.04
+            target: x86_64-unknown-linux-gnu
+            name: Linux-x64
+          - platform: windows-latest
+            target: x86_64-pc-windows-msvc
+            name: Windows-x64
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-action@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Install dependencies (Linux)
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
+
+      - name: Install Tauri CLI
+        run: cargo install tauri-cli
+
+      - name: Build Tauri App
+        working-directory: src-tauri
+        run: cargo tauri build --target ${{ matrix.target }}
+
+      - name: Upload macOS artifact (.dmg)
+        if: startsWith(matrix.platform, 'macos')
+        uses: actions/upload-artifact@v4
+        with:
+          name: SierraLauncher-${{ matrix.name }}
+          path: src-tauri/target/${{ matrix.target }}/release/bundle/dmg/*.dmg
+
+      - name: Upload Linux artifact (.deb)
+        if: matrix.platform == 'ubuntu-22.04'
+        uses: actions/upload-artifact@v4
+        with:
+          name: SierraLauncher-${{ matrix.name }}-deb
+          path: src-tauri/target/${{ matrix.target }}/release/bundle/deb/*.deb
+
+      - name: Upload Linux artifact (.AppImage)
+        if: matrix.platform == 'ubuntu-22.04'
+        uses: actions/upload-artifact@v4
+        with:
+          name: SierraLauncher-${{ matrix.name }}-AppImage
+          path: src-tauri/target/${{ matrix.target }}/release/bundle/appimage/*.AppImage
+
+      - name: Upload Windows artifact (.msi)
+        if: matrix.platform == 'windows-latest'
+        uses: actions/upload-artifact@v4
+        with:
+          name: SierraLauncher-${{ matrix.name }}
+          path: src-tauri/target/${{ matrix.target }}/release/bundle/msi/*.msi
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Display structure of downloaded files
+        run: ls -R artifacts
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Sierra Classics Launcher ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          files: |
+            artifacts/**/*.dmg
+            artifacts/**/*.deb
+            artifacts/**/*.AppImage
+            artifacts/**/*.msi
+          body: |
+            ## Sierra Classics Launcher ${{ github.ref_name }}
+
+            A cross-platform launcher for classic Sierra games.
+
+            ### Downloads
+
+            | Platform | File |
+            |----------|------|
+            | macOS (Apple Silicon) | `SierraLauncher-macOS-arm64.dmg` |
+            | macOS (Intel) | `SierraLauncher-macOS-x64.dmg` |
+            | Windows | `SierraLauncher-Windows-x64.msi` |
+            | Linux (Debian/Ubuntu) | `SierraLauncher-Linux-x64.deb` |
+            | Linux (Universal) | `SierraLauncher-Linux-x64.AppImage` |
+
+            ### Requirements
+
+            - DOSBox and/or ScummVM installed for launching games
+            - Your game database XML files and artwork
+
+            ### Installation
+
+            **macOS**: Open the `.dmg` and drag to Applications
+            **Windows**: Run the `.msi` installer
+            **Linux**: Install the `.deb` or run the `.AppImage` directly

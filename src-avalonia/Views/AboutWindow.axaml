@@ -1,0 +1,79 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="400"
+        x:Class="SierraLauncher.Views.AboutWindow"
+        Title="About Sierra Classics Launcher"
+        Width="450" Height="400"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner">
+
+    <DockPanel Margin="20">
+        <!-- OK Button at Bottom -->
+        <Button DockPanel.Dock="Bottom"
+                Content="OK"
+                HorizontalAlignment="Center"
+                Padding="30,8"
+                Click="OnOkClick" />
+
+        <!-- Content -->
+        <StackPanel Spacing="15">
+            <!-- Title -->
+            <TextBlock Text="Sierra Classics Launcher"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center" />
+
+            <TextBlock Text="Version 2.0.0"
+                       HorizontalAlignment="Center"
+                       Foreground="Gray" />
+
+            <Separator Margin="0,5" />
+
+            <!-- Author Info -->
+            <StackPanel Spacing="5">
+                <TextBlock Text="Original Author: Derek Wood"
+                           HorizontalAlignment="Center" />
+                <TextBlock Text="Originally Created: June 2, 2007"
+                           HorizontalAlignment="Center"
+                           Foreground="Gray" />
+                <TextBlock Text="Avalonia Port: 2024"
+                           HorizontalAlignment="Center"
+                           Foreground="Gray" />
+            </StackPanel>
+
+            <Separator Margin="0,5" />
+
+            <!-- Description -->
+            <TextBlock TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       Foreground="#444">
+                This program was designed as a customizable front-end launcher
+                for vintage Sierra games, allowing configuration for DOSBox,
+                ScummVM, or custom game launches.
+            </TextBlock>
+
+            <Separator Margin="0,5" />
+
+            <!-- Legal -->
+            <ScrollViewer MaxHeight="120">
+                <TextBlock TextWrapping="Wrap"
+                           FontSize="10"
+                           Foreground="Gray"
+                           TextAlignment="Justify">
+Sierra Entertainment, Gabriel Knight, King's Quest, Leisure Suit Larry,
+Police Quest, Quest for Glory, and Space Quest are registered trademarks
+or trademarks of their respective owners. All rights reserved.
+
+This launcher is an independent project and is not affiliated with,
+endorsed by, or connected to Sierra Entertainment, Activision, or any
+of their subsidiaries or affiliates.
+
+DOSBox and ScummVM are separate open-source projects with their own
+licenses and are not included with this software.
+                </TextBlock>
+            </ScrollViewer>
+        </StackPanel>
+    </DockPanel>
+</Window>
