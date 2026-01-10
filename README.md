@@ -64,7 +64,7 @@ Originally created by Derek Wood in June 2007 as a replacement for the launcher 
 
 ### Version History
 
-#### 2.0.0.0 (January 2026)
+#### 2.0.0 (2026)
 - Complete rewrite using Tauri for cross-platform support
 - Native macOS, Windows, and Linux builds
 - Modern UI with same functionality
