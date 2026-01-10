@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierra Classics Launcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-bar">
+                <div class="menu-item" data-menu="file">
+                    File
+                    <div class="dropdown">
+                        <button onclick="reloadDatabases()">Open Database...</button>
+                        <hr>
+                        <button onclick="exitApp()">Exit</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-menu="tools">
+                    Tools
+                    <div class="dropdown">
+                        <button onclick="showPreferences()">Preferences...</button>
+                        <button onclick="reloadDatabases()">Reload Databases</button>
+                    </div>
+                </div>
+                <div class="menu-item" data-menu="help">
+                    Help
+                    <div class="dropdown">
+                        <button onclick="showAbout()">About...</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Panel - Games List -->
+            <div class="games-panel">
+                <select id="database-selector" class="database-selector" onchange="onDatabaseChange()">
+                    <option value="">Select a database...</option>
+                </select>
+
+                <div id="games-list" class="games-list">
+                    <!-- Games will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Right Panel - Artwork and Options -->
+            <div class="artwork-panel">
+                <div class="artwork-container">
+                    <img id="artwork" src="" alt="Game Artwork" class="artwork">
+                    <div id="no-artwork" class="no-artwork">No Artwork</div>
+                </div>
+
+                <div class="options">
+                    <button id="manual-btn" class="btn btn-secondary" onclick="openManual()" disabled>
+                        View Manual
+                    </button>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="close-after-launch">
+                        Close window after launching
+                    </label>
+
+                    <button class="btn btn-primary" onclick="exitApp()">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <span id="status-message">Ready</span>
+        </footer>
+    </div>
+
+    <!-- Preferences Modal -->
+    <div id="preferences-modal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>Preferences</h2>
+                <button class="close-btn" onclick="hidePreferences()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="tabs">
+                    <button class="tab active" data-tab="general">General</button>
+                    <button class="tab" data-tab="database">Database Editor</button>
+                </div>
+
+                <!-- General Tab -->
+                <div id="tab-general" class="tab-content active">
+                    <h3>Paths</h3>
+                    <div class="form-group">
+                        <label>DOSBox Path:</label>
+                        <input type="text" id="pref-dosbox-path">
+                    </div>
+                    <div class="form-group">
+                        <label>ScummVM Path:</label>
+                        <input type="text" id="pref-scummvm-path">
+                    </div>
+                    <div class="form-group">
+                        <label>XML Database Path:</label>
+                        <input type="text" id="pref-xml-path">
+                    </div>
+                    <div class="form-group">
+                        <label>Game Art Path:</label>
+                        <input type="text" id="pref-art-path">
+                    </div>
+
+                    <h3>Window Settings</h3>
+                    <div class="form-group">
+                        <label>Title Format:</label>
+                        <input type="text" id="pref-title-format">
+                    </div>
+                    <div class="form-group">
+                        <label>Startup Database:</label>
+                        <select id="pref-startup-db">
+                            <option value="first">First</option>
+                            <option value="last">Last</option>
+                            <option value="random">Random</option>
+                            <option value="custom">Custom</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="custom-db-group" style="display: none;">
+                        <label>Custom Database:</label>
+                        <input type="text" id="pref-custom-db">
+                    </div>
+
+                    <h3>Options</h3>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="pref-close-on-save">
+                        Close preferences after saving
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="pref-hide-db">
+                        Hide database selector
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="pref-remember-db">
+                        Remember last database on exit
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="pref-show-art">
+                        Show game art on hover
+                    </label>
+                </div>
+
+                <!-- Database Editor Tab -->
+                <div id="tab-database" class="tab-content">
+                    <div class="form-group">
+                        <label>Database:</label>
+                        <select id="pref-db-selector"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Collection Name:</label>
+                        <input type="text" id="pref-db-name">
+                    </div>
+                    <div class="form-group">
+                        <label>Default Path:</label>
+                        <input type="text" id="pref-db-default-path">
+                    </div>
+                    <div class="form-group">
+                        <label>Manual Path:</label>
+                        <input type="text" id="pref-db-manual">
+                    </div>
+                    <div class="form-group">
+                        <label>Collection Artwork:</label>
+                        <input type="text" id="pref-db-artwork">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="hidePreferences()">Cancel</button>
+                <button class="btn btn-primary" onclick="savePreferences()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>About Sierra Classics Launcher</h2>
+                <button class="close-btn" onclick="hideAbout()">&times;</button>
+            </div>
+            <div class="modal-body about-body">
+                <h1>Sierra Classics Launcher</h1>
+                <p class="version">Version 2.0.0</p>
+                <hr>
+                <p><strong>Original Author:</strong> Derek Wood</p>
+                <p class="date">Originally Created: June 2, 2007</p>
+                <p class="date">Tauri Port: 2024</p>
+                <hr>
+                <p class="description">
+                    This program was designed as a customizable front-end launcher
+                    for vintage Sierra games, allowing configuration for DOSBox,
+                    ScummVM, or custom game launches.
+                </p>
+                <hr>
+                <p class="legal">
+                    Sierra Entertainment, Gabriel Knight, King's Quest, Leisure Suit Larry,
+                    Police Quest, Quest for Glory, and Space Quest are registered trademarks
+                    or trademarks of their respective owners. All rights reserved.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="hideAbout()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
