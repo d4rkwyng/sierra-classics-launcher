@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/Images/scl_logo_64p.webp" alt="Sierra Classics Launcher" width="128">
+</p>
+
 # Sierra Classics Launcher
 
 A customizable launcher for classic Sierra games (King's Quest, Space Quest, Leisure Suit Larry, Police Quest, Quest for Glory, and more).
@@ -19,7 +23,17 @@ A customizable launcher for classic Sierra games (King's Quest, Space Quest, Lei
 
 ## Screenshots
 
-<!-- Add screenshots here -->
+| King's Quest Collection | Space Quest Collection |
+|:-:|:-:|
+| ![King's Quest](assets/Images/scl_kq.webp) | ![Space Quest](assets/Images/scl_sq.webp) |
+
+| Gabriel Knight | Leisure Suit Larry Collection |
+|:-:|:-:|
+| ![Gabriel Knight](assets/Images/scl_gk.webp) | ![Leisure Suit Larry](assets/Images/scl_lsl.webp) |
+
+| Preferences - Main | Preferences - Database |
+|:-:|:-:|
+| ![Preferences](assets/Images/scl_pref.webp) | ![Database Editor](assets/Images/scl_pref2.webp) |
 
 ## Requirements
 
@@ -68,7 +82,7 @@ Originally created in June 2007 as a replacement for the launcher included with 
 - Added checkbox for remembering last opened database
 - Recoded launching of applications
 
-See [docs/ChangeLog.htm](docs/ChangeLog.htm) for the full version history.
+See [docs/CHANGELOG.md](docs/CHANGELOG.md) for the full version history.
 
 ## License
 
