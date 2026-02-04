@@ -74,7 +74,7 @@ An example database would look like this:
 == Contact ==
 =============
 
-If you have any comments or suggestions, please send them to dwood@sierraclassicgaming.com
+For comments or suggestions, open an issue on GitHub or contact @d4rkwyng.
 
 
 

@@ -6,3 +6,13 @@ Icon?
 ._*
 .Spotlight-V100/
 .Trashes
+
+# Visual Studio
+bin/
+obj/
+*.suo
+*.user
+*.pfx
+*.pdb
+_UpgradeReport_Files/
+UpgradeLog*.XML
