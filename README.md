@@ -8,17 +8,14 @@ A customizable launcher for classic Sierra games (King's Quest, Space Quest, Lei
 
 | Platform | Download |
 |----------|----------|
-| macOS (Apple Silicon) | `.dmg` |
-| macOS (Intel) | `.dmg` |
-| Windows | `.msi` |
-| Linux | `.deb` or `.AppImage` |
+| Windows | `.zip` |
 
 ## Features
 
 - Launch games via DOSBox, ScummVM, or custom programs
 - Build game collection databases with up to 7 games each
 - Display game artwork with hover preview
-- Cross-platform: macOS, Windows, and Linux
+- XML-based configuration for portable use
 
 ## Screenshots
 
@@ -26,6 +23,7 @@ A customizable launcher for classic Sierra games (King's Quest, Space Quest, Lei
 
 ## Requirements
 
+- Windows with .NET Framework 2.0 or higher
 - [DOSBox](https://www.dosbox.com/) and/or [ScummVM](https://www.scummvm.org/) installed
 - Your Sierra game files
 
@@ -46,28 +44,17 @@ Use these in your XML files:
 
 ## Building from Source
 
-The modern version is built with [Tauri](https://tauri.app/) (Rust + HTML/JS).
+Built with VB.NET Windows Forms. Open the solution file in Visual Studio:
 
-```bash
-cd src-tauri
-cargo install tauri-cli
-cargo tauri build
 ```
-
-See [src-tauri/README.md](src-tauri/README.md) for details.
-
----
+src/Sierra Classics Launcher.sln
+```
 
 ## History
 
-Originally created by Derek Wood in June 2007 as a replacement for the launcher included with Vivendi's 2006 Sierra collections.
+Originally created in June 2007 as a replacement for the launcher included with Vivendi's 2006 Sierra collections.
 
 ### Version History
-
-#### 2.0.0 (2026)
-- Complete rewrite using Tauri for cross-platform support
-- Native macOS, Windows, and Linux builds
-- Modern UI with same functionality
 
 #### 1.0.0.20 (July 2013)
 - Updated Program Logo and About information
@@ -81,11 +68,7 @@ Originally created by Derek Wood in June 2007 as a replacement for the launcher 
 - Added checkbox for remembering last opened database
 - Recoded launching of applications
 
----
-
-## Original Version
-
-The original VB.NET Windows Forms source code is preserved in the [`src/`](src/) directory for historical reference.
+See [docs/ChangeLog.htm](docs/ChangeLog.htm) for the full version history.
 
 ## License
 
