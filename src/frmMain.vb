@@ -1,5 +1,5 @@
 'Sierra Classics Launcher
-'Author: Derek Wood
+'Author: d4rkwyng
 'Created: 2 June 2007
 'Edited: 18 June 2009
 'Edited: 27 July 2009
