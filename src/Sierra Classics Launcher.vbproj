@@ -12,11 +12,9 @@
     <AssemblyName>SCLauncher</AssemblyName>
     <MyType>WindowsForms</MyType>
     <ApplicationIcon>Resources\Sierra.ico</ApplicationIcon>
-    <ManifestCertificateThumbprint>3CE57E09C36111F0E16C8BCD3BE47D10486E4D2D</ManifestCertificateThumbprint>
-    <ManifestKeyFile>Sierra Classics Launcher_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <TargetZone>LocalIntranet</TargetZone>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -160,7 +158,6 @@
     <BaseApplicationManifest Include="My Project\app.manifest">
       <SubType>Designer</SubType>
     </BaseApplicationManifest>
-    <None Include="Sierra Classics Launcher_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
