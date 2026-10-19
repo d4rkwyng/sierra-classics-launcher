@@ -255,7 +255,7 @@ Module modFunctions
                 Return
             End If
 
-            If intIndex < 0 > 7 Then Return ' Make sure index is within range of buttons
+            If intIndex < 0 OrElse intIndex > 6 Then Return ' Make sure index is within range of buttons
 
             Dim strPath As String, strProg As String, strExe As String, strCmd As String
             strPath = GameInfo(intIndex).strGamePath
@@ -268,11 +268,7 @@ Module modFunctions
             Else
 
                 If Not strPath = "" Then
-                    If Mid(strPath, strPath.Length) = "\" Then ' checks to see if there is a trailing \ slash
-                        strPath = Mid(strPath, 1, strPath.Length - 1)
-                    Else
-                        strPath &= "\"
-                    End If
+                    strPath = strPath.TrimEnd("\"c) & "\" ' ensure exactly one trailing \ slash
                 End If
 
 
