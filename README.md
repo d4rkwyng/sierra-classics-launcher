@@ -86,4 +86,4 @@ See [docs/CHANGELOG.md](docs/CHANGELOG.md) for the full version history.
 
 ## License
 
-See [LICENSE](LICENSE) file.
+See [LICENSE](LICENSE.md) file.
