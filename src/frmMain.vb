@@ -50,7 +50,7 @@ Public Class frmMain
             For i As Integer = 0 To CommandLineArgs.Count - 1
                 Select Case CommandLineArgs(i)
                     Case "-xml"
-                        If InStr(CommandLineArgs(i + 1), ".xml") Then
+                        If i + 1 < CommandLineArgs.Count AndAlso InStr(CommandLineArgs(i + 1), ".xml") > 0 Then
                             strXMLArg = CommandLineArgs(i + 1)
                         End If
                 End Select
@@ -74,10 +74,13 @@ Public Class frmMain
         Try
             Dim rand As New Random
             If Not XMLArg = "" Then
-                blHideDB = True
-                LoadXMLData(XMLDBPath & XMLArg)
-                SetInformation()
-                Exit Sub
+                If File.Exists(XMLDBPath & XMLArg) Then
+                    blHideDB = True
+                    LoadXMLData(XMLDBPath & XMLArg)
+                    SetInformation()
+                    Exit Sub
+                End If
+                MessageBox.Show(XMLArg & " was not found in " & XMLDBPath, "File Not Found")
             End If
 
             If LoadFiles(XMLDBPath) = True Then
