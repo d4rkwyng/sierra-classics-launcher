@@ -21,11 +21,12 @@ Module modFunctions
                                 ' initialize variables (precaution)
                                 Dim x As Integer
                                 For x = 0 To intGameCount
-                                    GameInfo(x).strGameExe = ""
+                                    GameInfo(x).strGameName = ""
                                     GameInfo(x).strGameProg = ""
                                     GameInfo(x).strGamePath = ""
                                     GameInfo(x).strGameExe = ""
                                     GameInfo(x).strGameCmd = ""
+                                    GameInfo(x).strGameArt = ""
                                 Next x
                             Case "DefaultPath"
                                 strDefaultPath = Input.ReadString

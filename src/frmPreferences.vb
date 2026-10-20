@@ -153,7 +153,7 @@ Public Class frmPreferences
                                     With GInfo(x)
                                         .strGameName = ""
                                         .strGameProg = ""
-                                        .strGameProg = ""
+                                        .strGamePath = ""
                                         .strGameExe = ""
                                         .strGameCmd = ""
                                         .strGameArt = ""
@@ -317,7 +317,7 @@ Public Class frmPreferences
             ' C:\Program Files (x86)\ScummVM\
             '
             Child = Doc.CreateElement("ScummVMPath")
-            If txtDOSBox.Text = "" Then
+            If txtScummVM.Text = "" Then
                 Child.InnerText = "C:\Program Files\ScummVm\"
             Else
                 Child.InnerText = txtScummVM.Text
@@ -734,7 +734,7 @@ Public Class frmPreferences
                 ' process new data
                 intGCount = CInt(txtNumButtons.Text)
 
-                If intNum > intGCount Then
+                If intNum >= intGCount Then
                     intNum = 0
                 End If
 
