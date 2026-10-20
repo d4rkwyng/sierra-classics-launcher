@@ -143,30 +143,19 @@ Public Class frmMain
 
     Public Function LoadFiles(ByVal strPath As String) As Boolean
         Try
-            Dim i As Integer
             Dim DirInfo As New IO.DirectoryInfo(strPath)
             Dim dirFiles As IO.FileInfo() = DirInfo.GetFiles()
             Dim File As IO.FileInfo
             cboDatabase.Items.Clear()
 
             For Each File In dirFiles
-                'strFile(i) = File.ToString
-                If InStr(File.ToString, ".xml") Then
+                If LCase(File.Extension) = ".xml" Then
                     cboDatabase.Items.Add(File)
                 End If
-
-                i += 1
             Next
 
-            If i > 0 Then
-                Return True
-            Else
-                Return False
-            End If
-
-            DirInfo = Nothing
-            dirFiles = Nothing
-            File = Nothing
+            ' Only count databases: callers index Items(0) when this returns True
+            Return cboDatabase.Items.Count > 0
         Catch ex As Exception
             Return False
         End Try
