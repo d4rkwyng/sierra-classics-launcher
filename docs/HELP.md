@@ -17,6 +17,10 @@ On initial loading the program will load the first database found in the XML fol
 
 - **Tools -> Reload** - Reloads databases
 
+### Command Line
+
+`SCLauncher.exe -xml KingsQuest.xml` opens that database directly and hides the database list. The file name is looked up in the XML folder; if it is not found there, the launcher shows a message and falls back to the startup database.
+
 ## Troubleshooting
 
 An example database would look like this:
@@ -34,7 +38,7 @@ An example database would look like this:
   <Game1Path>%PATH\SQ1VGA</Game1Path>
   <Game1Exe>SCIDHUV.EXE</Game1Exe>
   <Game1Cmd>-conf "%PATH\SQ1VGA\dosbox.conf" -noconsole -exit</Game1Cmd>
-  <Game1Art>"%GAMEART\SQ\SQ1.PNG"</Game1Art>
+  <Game1Art>%GAMEART\SQ\SQ1.PNG</Game1Art>
 </SpaceQuestCollection>
 ```
 
@@ -61,6 +65,8 @@ An example database would look like this:
 | `%PATH` | Specified default path to game directory |
 | `%CURDIR` | Application's startup path |
 | `%GAMEART` | Specified game art path |
+
+Variables must be written in upper case (`%PATH`, not `%path`); lower- or mixed-case spellings are not replaced.
 
 ## Contact
 
