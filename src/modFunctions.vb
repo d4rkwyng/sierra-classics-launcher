@@ -252,6 +252,7 @@ Module modFunctions
         Dim strLaunch As String = ""
         Try
             If intIndex = -1 Then 'Check to see if it's launching the Manual
+                strLaunch = strManual
                 Diagnostics.Process.Start(strManual)
                 Return
             End If
@@ -265,6 +266,7 @@ Module modFunctions
             strCmd = GameInfo(intIndex).strGameCmd
 
             If InStr(strPath, ".lnk") Then 'Check to see if it's a shortcut
+                strLaunch = strPath
                 Diagnostics.Process.Start(strPath)
             Else
 
@@ -290,7 +292,7 @@ Module modFunctions
                         strFileName &= "dosbox.exe"
                         If Not strPath.Length < 1 Then : strPath = "-c " & strQuote & "mount C '" & strPath & "'" & strQuote & " -c " & strQuote & "C:" & strQuote : End If
                         If Not strExe.Length < 1 Then : strExe = " -c " & strQuote & strExe & strQuote : End If
-                        strArguments = strPath & strExe & strCmd
+                        strArguments = (strPath & strExe & " " & strCmd).Trim()
                     Case "scummvm"
                         strFileName = strScummVMPath
                         If Not Mid(strFileName, strFileName.Length) = "\" Then : strFileName &= "\" : End If
@@ -300,13 +302,13 @@ Module modFunctions
                             strExe = ""
                             strArguments = strCmd
                         Else
-                            strArguments = "-p " & strPath & " " & strExe & strCmd
+                            strArguments = ("-p " & strPath & " " & strExe & " " & strCmd).Trim()
                         End If
                     Case ""
                         strFileName = strPath & strExe
                         strArguments = strCmd
                     Case Else
-                        strArguments = strPath & strExe & strCmd
+                        strArguments = (strPath & strExe & " " & strCmd).Trim()
                 End Select
 
                 With SCLProcess.StartInfo
@@ -316,6 +318,7 @@ Module modFunctions
                     .UseShellExecute = True
                 End With
 
+                strLaunch = (strFileName & " " & strArguments).Trim()
                 SCLProcess.Start()
 
                 strPath = Nothing
